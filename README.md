@@ -246,3 +246,23 @@ Bonsai-demo/
 ```
 
 Items marked with ← are created at setup time and excluded from git.
+
+---
+
+## Neuruh-hosted mirror (`server.py` / `server_gemma4.py`)
+
+Upstream lives at [PrismML-Eng/Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo). Contributor pushes may require PrismML credentials; Neuruh keeps a synced private fork at **`yousernamehere/neuruh-ocn-bonsai`** (remote **`personal`** locally).
+
+Extras in this fork:
+
+| File | Purpose |
+|------|---------|
+| `server.py` | FastAPI surface for quantized / hosted variants (see imports + routes at top of file) |
+| `server_gemma4.py` | Companion server tuned for Gemma-class weights |
+
+```bash
+git remote -v   # origin = PrismML, personal = neuruh-ocn-bonsai
+pip install fastapi uvicorn    # plus model-specific deps from PrismML docs
+```
+
+The symlink **`neuruh-ocn-bonsai/`** pointing at `/Volumes/...` is intentionally **gitignored** so clones stay portable across machines without external disks.
