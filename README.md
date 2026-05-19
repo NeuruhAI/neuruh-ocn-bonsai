@@ -272,3 +272,20 @@ pip install fastapi uvicorn    # plus model-specific deps from PrismML docs
 ```
 
 The symlink **`neuruh-ocn-bonsai/`** pointing at `/Volumes/...` is intentionally **gitignored** so clones stay portable across machines without external disks.
+
+### Run locally (Neuruh org fork)
+
+```bash
+cp .env.example .env
+pip install fastapi uvicorn requests
+
+# Optional Ollama proxy for axon/vault (port 8100)
+python3 ../neuruh-vault/_scripts/bonsai_proxy.py
+
+# Or from this repo after MLX setup:
+uvicorn server:app --host 127.0.0.1 --port 8080
+# Gemma4 variant:
+# uvicorn server_gemma4:app --host 127.0.0.1 --port 8080
+```
+
+Canonical remote: **`neuruhai`** → [NeuruhAI/neuruh-bonsai-gemma4](https://github.com/NeuruhAI/neuruh-bonsai-gemma4).

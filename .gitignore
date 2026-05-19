@@ -218,3 +218,6 @@ mlx/
 *.tar.gz
 *.zip
 neuruh-ocn-bonsai
+*.bak
+*.bak.*
+server_gemma4.py.bak*
