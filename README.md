@@ -251,7 +251,13 @@ Items marked with ← are created at setup time and excluded from git.
 
 ## Neuruh-hosted mirror (`server.py` / `server_gemma4.py`)
 
-Upstream lives at [PrismML-Eng/Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo). Contributor pushes may require PrismML credentials; Neuruh keeps a synced private fork at **`yousernamehere/neuruh-ocn-bonsai`** (remote **`personal`** locally).
+| Remote | Repo | Role |
+|--------|------|------|
+| `origin` | [PrismML-Eng/Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo) | Upstream PrismML demo (may diverge) |
+| `personal` | [yousernamehere/neuruh-ocn-bonsai](https://github.com/yousernamehere/neuruh-ocn-bonsai) | Personal fork (legacy name) |
+| `neuruhai` | [NeuruhAI/neuruh-bonsai-gemma4](https://github.com/NeuruhAI/neuruh-bonsai-gemma4) | **Canonical Neuruh org fork** with Gemma4/MLX fixes |
+
+Neuruh-specific inference servers live only on the **`neuruhai`** / **`personal`** remotes — not on PrismML upstream.
 
 Extras in this fork:
 
