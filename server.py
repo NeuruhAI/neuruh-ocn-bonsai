@@ -88,7 +88,7 @@ def run_mlx(prompt: str, max_tokens: int = 200, temp: float = 0.7) -> str:
         raise HTTPException(503, f"Python not found: {VENV_PYTHON}")
 
     cmd = [
-        VENV_PYTHON, "-m", "mlx_lm.generate",
+        VENV_PYTHON, "mlx_lm", "generate",
         "--model", MODEL_PATH,
         "--prompt", prompt,
         "--max-tokens", str(max_tokens),
